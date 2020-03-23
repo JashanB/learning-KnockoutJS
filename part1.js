@@ -5,6 +5,10 @@ function AppViewModel() {
   this.fullName = ko.computed(function () {
     return this.firstName() + " " + this.lastName();
   }, this);
+  this.capitalizeLastName = function () {
+    let currentVal = this.lastName();
+    this.lastName(currentVal.toUpperCase());
+  };
 }
 //binds based on firstName/lastName variables
 //observables - these are properties that automatically will issue notifications whenever their value changes
