@@ -10,6 +10,11 @@ function ReservationsViewModel() {
   var self = this;
 
   // Non-editable catalog data - would come from the server
+
+  self.addSeat = function() {
+    self.seats.push(new SeatReservation("", self.availableMeals[0]))
+}
+
   self.availableMeals = [
       { mealName: "Standard (sandwich)", price: 0 },
       { mealName: "Premium (lobster)", price: 34.95 },
